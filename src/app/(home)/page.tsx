@@ -1,3 +1,4 @@
+import { Presentation } from "../Components/Presentation";
 import { Header } from "../Components/Header";
 import { PostItCard } from "../Components/PostItCard";
 
@@ -9,6 +10,7 @@ export default function Home() {
         <section>
           <PostItCard />
         </section>
+        <Presentation />
       </main>
     </>
   );

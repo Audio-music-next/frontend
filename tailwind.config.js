@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         header: "url('assents/image/bg-header.jpg')",
+        presentation: "url('assents/image/bg-presentation.jpg')",
       },
       transitionProperty: {
         height: "height",
