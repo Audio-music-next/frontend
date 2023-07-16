@@ -1,3 +1,3 @@
-export const Logo = ({ onClick }: any) => {
-  return <div onClick={onClick}>AudioMusic</div>;
+export const Logo = () => {
+  return <h1 className="text-heading-2 font-400 text-white">AudioMusic</h1>;
 };

@@ -53,12 +53,12 @@ const Icons = () => {
 
 export const Footer = () => {
   return (
-    <footer className="relative bg-random-3 flex flex-col gap-5 items-center justify-center text-gray-5 w-full">
-      <h1 className="text-heading-1">Contato</h1>
-      <h2 className="text-heading-2">(XX) X XXXX - XXXX</h2>
-      <h3 className="text-heading-3">endereço - cidade - estado</h3>
+    <footer className="relative bg-random-3 flex flex-col gap-6 items-center justify-center text-gray-5 w-full text-center">
+      <h3 className="text-heading-4">Contato</h3>
+      <h1 className="text-heading-2 font-600">(XX) X XXXX - XXXX</h1>
+      <h2 className="text-heading-3">endereço - cidade - estado</h2>
       <Icons />
-      <ChevronUpIcon className="absolute top-[45%] right-[5%] w-8 h-8 cursor-pointer bg-gray-5 p-1 rounded-radius-1 text-gray-1" />
+      <ChevronUpIcon className="absolute top-6 md:top-[45%] right-[5%] w-8 h-8 cursor-pointer bg-gray-5 p-1 rounded-radius-1 text-gray-1" />
     </footer>
   );
 };
