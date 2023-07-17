@@ -28,10 +28,9 @@ export const Player = ({ music }: iPlayerProps) => {
 
   return (
     <React.Fragment>
-      <PlayerSelect
-        onClick={playerCallback}
-        className="w-14 h-14 absolute top-[30%] text-gray-5 cursor-pointer"
-      />
+      <button onClick={() => playerCallback}>
+        <PlayerSelect className="w-14 h-14 absolute top-[30%] text-gray-5 cursor-pointer" />
+      </button>
     </React.Fragment>
   );
 };
