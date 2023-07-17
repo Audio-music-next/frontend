@@ -5,7 +5,7 @@ import { Player } from "../Player";
 
 export const MusicCard = () => {
   return (
-    <ul className="flex gap-8 overflow-x-auto w-full justify-start items-center px-[5%] pb-6">
+    <ul className="flex gap-8 overflow-x-auto w-full justify-start md:justify-center items-center px-[5%] pb-6 md:flex-wrap">
       {musics.map((music) => (
         <li
           key={music.id}

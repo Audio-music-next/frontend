@@ -3,7 +3,7 @@ import { MusicalNoteIcon } from "@heroicons/react/24/solid";
 
 export const PostItCard = () => {
   return (
-    <ul className="flex gap-8 overflow-x-auto w-full justify-start items-center pb-5 px-[5%]">
+    <ul className="flex gap-8 w-full overflow-x-auto items-center pb-5 px-[5%] xl:overflow-x-hidden  justify-start xl:justify-center   ">
       {postIts.map((post) => (
         <li
           key={post.title}
