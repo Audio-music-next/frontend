@@ -4,8 +4,19 @@ import { PostItCard } from "../Components/PostItCard";
 import { Footer } from "../Components/Footer";
 import { MusicCard } from "../Components/MusicCard";
 import { PartnerCompanies } from "../Components/PartnerCompanies";
+import { instance } from "../services/axios";
 
-export default function Home() {
+export default async function Home() {
+  const recordings = await instance
+    .get("recording", {
+      params: {
+        _limit: 6,
+        _page: 1,
+      },
+    })
+    .then((res) => res.data)
+    .catch((err) => console.log(err));
+
   return (
     <>
       <Header />
@@ -18,7 +29,7 @@ export default function Home() {
           <h2 className="text-heading-2 text-gray-1 font-600">
             Um pouco do nosso trabalho
           </h2>
-          <MusicCard />
+          <MusicCard recordings={recordings} />
         </section>
         <section className="flex flex-col gap-12 items-center bg-gray-4">
           <h2 className="text-heading-2 text-gray-1 font-600">
