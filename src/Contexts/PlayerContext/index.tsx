@@ -1,6 +1,6 @@
 "use client";
 
-import { instance } from "@/app/services/axios";
+import { instance } from "@/services/axios";
 import React, { ReactNode, createContext, useEffect, useState } from "react";
 
 interface iPlayerProviderValues {

@@ -12,7 +12,6 @@ export const ProgressAudio = ({ recording }: iProgressAudio) => {
   const progressDivRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    console.log(recordingSelected?.src, recording.audio);
     if (recordingSelected?.src !== recording.audio) {
       if (progressDivRef.current?.style) {
         progressDivRef.current.style.width = "0px";
@@ -44,7 +43,7 @@ export const ProgressAudio = ({ recording }: iProgressAudio) => {
 
   return (
     <div
-      className={`absolute top-0 left-0 bg-random-3 z-20 h-full min-w-0 ease-in-out rounded-radius-2 overflow-hidden`}
+      className={`absolute top-0 left-0 bg-random-3 z-20 h-full min-w-0 ease-in-out rounded-radius-1 overflow-hidden`}
       ref={progressDivRef}
     ></div>
   );

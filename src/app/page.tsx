@@ -25,8 +25,8 @@ export default async function Home() {
         <section>
           <PostItCard />
         </section>
-        <section className="flex flex-col gap-16 items-center">
-          <h2 className="text-heading-2 text-gray-1 font-600">
+        <section className="flex flex-col gap-16 items-center pt-0">
+          <h2 className="text-center text-heading-2 text-gray-1 font-600">
             Um pouco do nosso trabalho
           </h2>
           <MusicCard recordings={recordings} />

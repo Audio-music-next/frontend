@@ -2,7 +2,7 @@ export const Presentation = () => {
   return (
     <section className="relative bg-presentation w-full object-cover -z-20 ">
       <div
-        className="absolute h-full w-full  backdrop-blur-sm backdrop-opacity-100
+        className="absolute h-full w-full backdrop-blur-sm backdrop-opacity-100
        bg-white/30  top-0 left-0 -z-10"
       />
       <div className="flex flex-col gap-6 ">
