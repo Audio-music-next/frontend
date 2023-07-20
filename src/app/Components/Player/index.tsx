@@ -1,24 +1,28 @@
 import { PlayerContext } from "@/Contexts/PlayerContext";
 import { iRecording } from "@/Contexts/RecordingContext";
-import { iMusic } from "@/app/constants/musics";
 import { PlayCircleIcon, PauseCircleIcon } from "@heroicons/react/24/outline";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
 interface iPlayerProps {
   recording: iRecording;
   handlePlay: () => void;
 }
 
-export const Player = ({ handlePlay }: iPlayerProps) => {
-  const {
-    recordingPlaying,
-    playRecording,
-    pauseRecording,
-    updateRecordingSelected,
-  } = useContext(PlayerContext);
+export const Player = ({ recording, handlePlay }: iPlayerProps) => {
+  const { recordingPlaying, recordingSelected, pauseRecording } =
+    useContext(PlayerContext);
 
-  const PlayerSelect = recordingPlaying ? PauseCircleIcon : PlayCircleIcon;
-  const playerCallback = recordingPlaying ? pauseRecording : handlePlay;
+  const recordingIsPlaying =
+    recordingPlaying && recordingSelected?.src === recording.audio;
+
+  console.log(
+    recording.title,
+    recordingPlaying,
+    recordingSelected?.src === recording.audio
+  );
+
+  const PlayerSelect = recordingIsPlaying ? PauseCircleIcon : PlayCircleIcon;
+  const playerCallback = recordingIsPlaying ? pauseRecording : handlePlay;
 
   return (
     <React.Fragment>

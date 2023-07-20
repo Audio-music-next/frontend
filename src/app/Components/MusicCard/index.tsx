@@ -17,7 +17,7 @@ export const MusicCard = ({ recordings }: iMusicCard) => {
       {recordings.map((recording: iRecording) => (
         <li
           key={recording.id}
-          className="min-w-[260px] min-h-[280px]  flex flex-col items-center justify-between gap-2 rounded-radius-2 bg-random-2 p-4"
+          className="w-[260px] h-[280px]  flex flex-col items-center justify-between gap-2 rounded-radius-2 bg-random-2 p-4"
         >
           <div className="flex justify-center items-center h-[200px]">
             <Player
