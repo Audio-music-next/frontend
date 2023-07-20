@@ -15,12 +15,6 @@ export const Player = ({ recording, handlePlay }: iPlayerProps) => {
   const recordingIsPlaying =
     recordingPlaying && recordingSelected?.src === recording.audio;
 
-  console.log(
-    recording.title,
-    recordingPlaying,
-    recordingSelected?.src === recording.audio
-  );
-
   const PlayerSelect = recordingIsPlaying ? PauseCircleIcon : PlayCircleIcon;
   const playerCallback = recordingIsPlaying ? pauseRecording : handlePlay;
 
