@@ -1,6 +1,6 @@
 import { PlayerContext } from "@/Contexts/PlayerContext";
 import { iRecording } from "@/Contexts/RecordingContext";
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
 interface iProgressAudio {
   recording: iRecording;
@@ -12,7 +12,11 @@ export const ProgressAudio = ({ recording }: iProgressAudio) => {
   const progressDivRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    console.log(recordingSelected?.src, recording.audio);
     if (recordingSelected?.src !== recording.audio) {
+      if (progressDivRef.current?.style) {
+        progressDivRef.current.style.width = "0px";
+      }
       return;
     }
 
@@ -25,7 +29,10 @@ export const ProgressAudio = ({ recording }: iProgressAudio) => {
         (recordingSelected.currentTime / recordingSelected.duration) * 100;
       const roundProgress = String(Math.round(progress));
 
-      console.log(roundProgress);
+      if (progressDivRef.current?.style) {
+        const widthProgress = roundProgress === "100" ? "0" : roundProgress;
+        progressDivRef.current.style.width = `${widthProgress}%`;
+      }
     }
 
     recordingSelected?.addEventListener("timeupdate", eventTimeUpdate);
@@ -35,5 +42,10 @@ export const ProgressAudio = ({ recording }: iProgressAudio) => {
     };
   }, [recordingSelected, recording]);
 
-  return <div ref={progressDivRef}></div>;
+  return (
+    <div
+      className={`absolute top-0 left-0 bg-random-3 z-20 h-full min-w-0 ease-in-out rounded-radius-2 overflow-hidden`}
+      ref={progressDivRef}
+    ></div>
+  );
 };
