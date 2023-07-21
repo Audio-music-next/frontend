@@ -1,6 +1,6 @@
 import { Presentation } from "../Components/Presentation";
 import { Header } from "../Components/Header";
-import { PostItCard } from "../Components/PostItCard";
+import { PostItCards } from "../Components/PostItCard";
 import { Footer } from "../Components/Footer";
 import { MusicCard } from "../Components/MusicCard";
 import { PartnerCompanies } from "../Components/PartnerCompanies";
@@ -23,7 +23,7 @@ export default async function Home() {
       <main className="flex min-h-screen flex-col items-center justify-between">
         <Presentation />
         <section>
-          <PostItCard />
+          <PostItCards />
         </section>
         <section className="flex flex-col gap-16 items-center pt-0">
           <h2 className="text-center text-heading-2 text-gray-1 font-600">
