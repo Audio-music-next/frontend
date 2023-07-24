@@ -3,24 +3,24 @@ import companyImage from "../../assents/image/company.png";
 
 export const PartnerCompanies = () => {
   return (
-    <ul className="flex flex-wrap justify-center md:flex-nowrap gap-6">
+    <ul className="grid gap-4 grid-cols-2 md:grid-cols-4 sm:gap-12  ">
       <Image
-        className="object-cover bg-gray-3 p-1 rounded-radius-1 h-18 md:h-16 w-32 md:w-20"
+        className="object-cover bg-gray-3 p-1 rounded-radius-1 max-w-[120px] sm:max-w-[160px] "
         src={companyImage}
         alt="Empresa parceira"
       />
       <Image
-        className="object-cover bg-gray-3 p-1 rounded-radius-1 h-18 md:h-16 w-32 md:w-20"
+        className="object-cover bg-gray-3 p-1 rounded-radius-1 max-w-[120px] sm:max-w-[160px] "
         src={companyImage}
         alt="Empresa parceira"
       />
       <Image
-        className="object-cover bg-gray-3 p-1 rounded-radius-1 h-18 md:h-16 w-32 md:w-20"
+        className="object-cover bg-gray-3 p-1 rounded-radius-1 max-w-[120px] sm:max-w-[160px] "
         src={companyImage}
         alt="Empresa parceira"
       />
       <Image
-        className="object-cover bg-gray-3 p-1 rounded-radius-1 h-18 md:h-16 w-32 md:w-20"
+        className="object-cover bg-gray-3 p-1 rounded-radius-1 max-w-[120px] sm:max-w-[160px] "
         src={companyImage}
         alt="Empresa parceira"
       />

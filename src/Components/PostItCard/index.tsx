@@ -14,6 +14,8 @@ export const PostItCards = () => {
       breakpoints(window.innerWidth);
     };
 
+    console.log(windowWidth);
+
     breakpoints(windowWidth);
     window.addEventListener("resize", handleWindowResize);
     return () => window.removeEventListener("resize", handleWindowResize);
@@ -22,7 +24,7 @@ export const PostItCards = () => {
   const breakpoints = (width: number) => {
     if (width > 1440) {
       return setSlidesPerView(4);
-    } else if (width > 1280) {
+    } else if (width > 1024) {
       return setSlidesPerView(3);
     } else if (width > 768) {
       return setSlidesPerView(2);
