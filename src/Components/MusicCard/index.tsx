@@ -14,7 +14,7 @@ export const MusicCard = ({ recordings }: iMusicCard) => {
   const { updateRecordingSelected } = useContext(PlayerContext);
 
   return (
-    <ul className="flex gap-8 overflow-x-auto w-full justify-start md:justify-center items-center px-[5%] pb-6 md:flex-wrap">
+    <ul className="grid grid-flow-col gap-8 md:gap-10 lg:gap-14 overflow-x-auto w-full md:w-auto justify-items-center md:grid-rows-3 lg:grid-rows-2 md:grid-cols-2  lg:grid-cols-3  ">
       {recordings.map((recording: iRecording) => (
         <li
           key={recording.id}
