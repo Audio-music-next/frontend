@@ -7,9 +7,7 @@ import { SwiperPostIts } from "../SwiperPostIts";
 export const PostItCards = () => {
   const initialWindowWidth = useRef<number>(window.innerWidth);
 
-  const [windowWidth, setWindowWidth] = useState<number>(
-    initialWindowWidth.current
-  );
+  const [windowWidth, setWindowWidth] = useState(initialWindowWidth.current);
   const [slidesPerView, setSlidesPerView] = useState<number>(1);
 
   useEffect(() => {
