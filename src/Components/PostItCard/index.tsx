@@ -5,9 +5,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { SwiperPostIts } from "../SwiperPostIts";
 
 export const PostItCards = () => {
-  const initialWindowWidth = useRef<number>(window.innerWidth);
-
-  const [windowWidth, setWindowWidth] = useState(initialWindowWidth.current);
+  const [windowWidth, setWindowWidth] = useState<number | false>(
+    typeof window !== "undefined" && window.innerWidth
+  );
   const [slidesPerView, setSlidesPerView] = useState<number>(1);
 
   useEffect(() => {
@@ -16,7 +16,8 @@ export const PostItCards = () => {
       breakpoints(window.innerWidth);
     };
 
-    breakpoints(windowWidth);
+    if (windowWidth) breakpoints(windowWidth);
+
     window.addEventListener("resize", handleWindowResize);
     return () => window.removeEventListener("resize", handleWindowResize);
   }, [windowWidth]);
