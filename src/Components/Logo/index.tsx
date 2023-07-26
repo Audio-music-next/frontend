@@ -1,3 +1,14 @@
+import Image from "next/image";
+import LogoImage from "../../assents/image/logo.png";
+
 export const Logo = () => {
-  return <h1 className="text-heading-2 font-400 text-white">AudioMusic</h1>;
+  return (
+    <figure>
+      <Image
+        src={LogoImage}
+        alt="Logo audioMusic"
+        className="w-[200px] object-cover rounded-radius-2"
+      />
+    </figure>
+  );
 };

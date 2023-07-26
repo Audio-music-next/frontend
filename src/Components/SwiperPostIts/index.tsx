@@ -11,7 +11,7 @@ interface iSwiperPostIts {
 export const SwiperPostIts = ({ slidesPerView }: iSwiperPostIts) => {
   return (
     <Swiper
-      className="sm:w-auto"
+      className="sm:px-12"
       spaceBetween={30}
       slidesPerView={slidesPerView}
     >
