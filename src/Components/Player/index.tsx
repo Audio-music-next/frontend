@@ -21,7 +21,7 @@ export const Player = ({ recording, handlePlay }: iPlayerProps) => {
   return (
     <React.Fragment>
       <button onClick={playerCallback}>
-        <PlayerSelect className="w-14 h-14 text-gray-5 cursor-pointer" />
+        <PlayerSelect className="w-14 h-14 cursor-pointer text-gray-7 hover:text-gray-4 " />
       </button>
     </React.Fragment>
   );
