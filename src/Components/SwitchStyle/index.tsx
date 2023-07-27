@@ -1,23 +1,28 @@
 "use client";
 
-import { useState } from "react";
 import { Switch } from "@headlessui/react";
+import { useTheme } from "next-themes";
 
 export const SwitchStyle = () => {
-  const [blackMode, setBlackMode] = useState<boolean>(false);
+  const { systemTheme, theme, setTheme } = useTheme();
+
+  const isDarkMode = theme === "dark" ? false : true;
+  const setDarkMode = theme === "dark" ? "light" : "dark";
+
+  console.log(systemTheme);
 
   return (
     <Switch
-      checked={blackMode}
-      onChange={setBlackMode}
+      checked={isDarkMode}
+      onChange={() => setTheme(setDarkMode)}
       className={`${
-        blackMode ? "bg-blue-600" : "bg-gray-200"
+        isDarkMode ? "bg-gray-2" : "bg-gray-5"
       } relative inline-flex h-6 w-11 items-center rounded-full`}
     >
       <span className="sr-only">Enable notifications</span>
       <span
         className={`${
-          blackMode ? "translate-x-6" : "translate-x-1"
+          isDarkMode ? "translate-x-6" : "translate-x-1"
         } inline-block h-4 w-4 transform rounded-full bg-white transition`}
       />
     </Switch>

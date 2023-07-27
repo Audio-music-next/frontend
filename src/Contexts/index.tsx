@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { RecordingProvider } from "./RecordingContext";
 import { PlayerProvider } from "./PlayerContext";
+import { ThemeProvider } from "next-themes";
 
 interface iProviders {
   children: ReactNode;
@@ -8,8 +9,10 @@ interface iProviders {
 
 export const Providers = ({ children }: iProviders) => {
   return (
-    <RecordingProvider>
-      <PlayerProvider>{children}</PlayerProvider>
-    </RecordingProvider>
+    <ThemeProvider attribute="class">
+      <RecordingProvider>
+        <PlayerProvider>{children}</PlayerProvider>
+      </RecordingProvider>
+    </ThemeProvider>
   );
 };

@@ -29,7 +29,7 @@ export default async function Home() {
         <section>
           <PostItCards />
         </section>
-        <section className="flex flex-col items-center justify-around gap-6 bg-gray-6 md:flex-row">
+        <section className="flex flex-col items-center justify-around gap-6 bg-gray-6 md:flex-row dark:bg-gray-2">
           <TextSection />
           <ImageSection />
         </section>
@@ -39,7 +39,7 @@ export default async function Home() {
           </h2>
           <MusicCard recordings={recordings} />
         </section>
-        <section className="flex flex-col gap-12 items-center bg-gray-4">
+        <section className="flex flex-col gap-12 items-center bg-gray-4 dark:bg-gray-3">
           <h2 className="text-heading-2 text-gray-1 font-600 text-center">
             Empresas parceiras
           </h2>

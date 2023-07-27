@@ -111,7 +111,7 @@ export const YoutubeIcon = () => {
 
 export const Footer = () => {
   return (
-    <footer className="relative bg-gray-3 flex flex-col gap-5 items-center justify-center text-gray-8 w-full text-center">
+    <footer className="relative bg-gray-3 flex flex-col gap-5 items-center justify-center text-gray-8 w-full text-center dark:bg-gray-3 dark:text-gray-6">
       <h3 className="text-heading-4">Contato</h3>
       <h1 className="text-heading-2 font-600">(85) 4002 - 8922</h1>
       <h2 className="text-heading-3">
