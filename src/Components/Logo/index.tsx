@@ -7,7 +7,7 @@ export const Logo = () => {
       <Image
         src={LogoImage}
         alt="Logo audioMusic"
-        className="w-[200px] object-cover rounded-radius-2"
+        className="w-[40px] object-cover rounded-radius-2"
       />
     </figure>
   );

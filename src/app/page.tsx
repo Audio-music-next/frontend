@@ -5,6 +5,8 @@ import { Footer } from "../Components/Footer";
 import { MusicCard } from "../Components/MusicCard";
 import { PartnerCompanies } from "../Components/PartnerCompanies";
 import { instance } from "../services/axios";
+import { TextSection } from "@/Components/TextSection";
+import { ImageSection } from "@/Components/ImageSection";
 
 export default async function Home() {
   const recordings = await instance
@@ -21,13 +23,19 @@ export default async function Home() {
     <>
       <Header />
       <main className="flex min-h-screen flex-col items-center justify-between">
-        <Presentation />
+        <section className="relative bg-presentation w-full object-cover -z-20 ">
+          <Presentation />
+        </section>
         <section>
           <PostItCards />
         </section>
-        <section className="flex flex-col gap-16 items-center pt-0">
+        <section className="flex flex-col items-center justify-around gap-6 bg-gray-6 md:flex-row">
+          <TextSection />
+          <ImageSection />
+        </section>
+        <section className="flex flex-col gap-16 items-center ">
           <h2 className="text-center text-heading-2 text-gray-1 font-600">
-            Um pouco do nosso trabalho
+            Nossas produções em destaque
           </h2>
           <MusicCard recordings={recordings} />
         </section>
