@@ -2,7 +2,6 @@ import { Providers } from "@/Contexts";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR" suppressHydrationWarning>
       <Providers>
         <body className={inter.className}>{children}</body>
       </Providers>
