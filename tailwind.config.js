@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/Components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -23,7 +24,7 @@ module.exports = {
         "radius-3": "1rem",
       },
       colors: {
-        "grey-0": "#15171A",
+        "gray-0": "#15171A",
         "gray-1": "#212529",
         "gray-2": "#2B2F33",
         "gray-3": "#868E96",

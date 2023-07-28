@@ -7,7 +7,7 @@ export const Presentation = () => {
         className="absolute h-full w-full backdrop-blur-sm backdrop-opacity-100
        bg-white/30  top-0 left-0 -z-10"
       />
-      <div className="flex flex-col gap-6 text-gray-0 ">
+      <div className="flex flex-col gap-6 text-gray-0 dark:text-gray-8">
         <h1 className="text-heading-3 font-600 ">
           Bem-vindo ao Palco da Essência Sonora!
         </h1>

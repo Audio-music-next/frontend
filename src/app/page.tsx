@@ -29,18 +29,18 @@ export default async function Home() {
         <section>
           <PostItCards />
         </section>
-        <section className="flex flex-col items-center justify-around gap-6 bg-gray-6 md:flex-row">
+        <section className="flex flex-col items-center justify-around gap-6 bg-gray-6 md:flex-row dark:bg-gray-2">
           <TextSection />
           <ImageSection />
         </section>
         <section className="flex flex-col gap-16 items-center ">
-          <h2 className="text-center text-heading-2 text-gray-1 font-600">
+          <h2 className="text-center text-heading-2 text-gray-1 font-600 dark:text-gray-8">
             Nossas produções em destaque
           </h2>
           <MusicCard recordings={recordings} />
         </section>
-        <section className="flex flex-col gap-12 items-center bg-gray-4">
-          <h2 className="text-heading-2 text-gray-1 font-600 text-center">
+        <section className="flex flex-col gap-12 items-center bg-gray-4 dark:bg-gray-1">
+          <h2 className="text-heading-2 text-gray-1 font-600 text-center dark:text-gray-7">
             Empresas parceiras
           </h2>
           <PartnerCompanies />
