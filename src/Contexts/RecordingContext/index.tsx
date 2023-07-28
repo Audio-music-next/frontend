@@ -1,11 +1,8 @@
 "use client";
 
-import React, { ReactNode, createContext, useState } from "react";
+import React, { ReactNode, createContext } from "react";
 
-interface iRecordingProviderValues {
-  isBlackMode: boolean;
-  setIsBlackMode: React.Dispatch<React.SetStateAction<boolean>>;
-}
+interface iRecordingProviderValues {}
 interface iRecordingProviderProps {
   children: ReactNode;
 }
@@ -21,11 +18,7 @@ export const RecordingContext = createContext<iRecordingProviderValues>(
 );
 
 export const RecordingProvider = ({ children }: iRecordingProviderProps) => {
-  const [isBlackMode, setIsBlackMode] = useState<boolean>(false);
-
   return (
-    <RecordingContext.Provider value={{ isBlackMode, setIsBlackMode }}>
-      {children}
-    </RecordingContext.Provider>
+    <RecordingContext.Provider value={{}}>{children}</RecordingContext.Provider>
   );
 };

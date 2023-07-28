@@ -1,6 +1,5 @@
 "use client";
 
-import { instance } from "@/services/axios";
 import React, { ReactNode, createContext, useEffect, useState } from "react";
 
 interface iPlayerProviderValues {
@@ -36,8 +35,6 @@ export const PlayerProvider = ({ children }: iPlayerProviderProps) => {
         setRecordingPlaying(false)
       );
     };
-    console.log("clicou");
-
     resetPlayer();
   }, [recordingSelected]);
 
