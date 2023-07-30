@@ -43,7 +43,7 @@ export const ProgressAudio = ({ recording }: iProgressAudio) => {
 
   return (
     <div
-      className={`absolute top-0 left-0 bg-random-3 z-20 h-full min-w-0 ease-in-out rounded-radius-1 overflow-hidden`}
+      className={`absolute top-0 left-0 bg-random-2 dark:bg-random-3 z-20 h-full min-w-0 ease-in-out rounded-radius-1 overflow-hidden`}
       ref={progressDivRef}
     ></div>
   );
