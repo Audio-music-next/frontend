@@ -5,8 +5,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Audio music",
-  description: "O melhor para sua gravação",
+  title: "Metalverse",
+  description: "A nova essência da música",
   icons: { shortcut: "../assents/image/logo.png" },
 };
 
