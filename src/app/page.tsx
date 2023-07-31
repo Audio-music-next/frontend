@@ -39,7 +39,7 @@ export default async function Home() {
           </h2>
           <MusicCard recordings={recordings} />
         </section>
-        <section className="flex flex-col gap-12 items-center bg-gray-4 dark:bg-gray-1">
+        <section className="flex flex-col gap-12 items-center dark:bg-gray-1">
           <h2 className="text-heading-2 text-gray-1 font-600 text-center dark:text-gray-7">
             Empresas parceiras
           </h2>

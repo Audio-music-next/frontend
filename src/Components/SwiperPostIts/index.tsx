@@ -22,9 +22,9 @@ export const SwiperPostIts = ({ slidesPerView }: iSwiperPostIts) => {
         <SwiperSlide key={post.title}>
           <li
             key={post.title}
-            className=" w-[200px] h-[220px] flex flex-col gap-2 rounded-radius-2 relative bg-gray-5 p-4 pt-3 my-0 mx-auto min-[400px]:w-[240px] xl:mx-0:left-7 dark:bg-gray-3"
+            className=" w-[200px] h-[220px] flex flex-col gap-2 rounded-radius-2 relative bg-random-1 p-4 pt-3 my-0 mx-auto min-[400px]:w-[240px] xl:mx-0:left-7 dark:bg-gray-3"
           >
-            <MusicalNoteIcon className="text-gray-5 absolute top-3 left-3 w-7 h-7" />
+            <MusicalNoteIcon className="text-gray-9 absolute top-3 left-3 w-7 h-7 dark:text-gray-1" />
             <h5 className="ml-8 text-body-1 font-600 text-gray-1 sm:text-heading-5 dark:text-gray-9">
               {post.title}
             </h5>

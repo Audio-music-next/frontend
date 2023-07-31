@@ -20,7 +20,7 @@ export const PartnerCompanies = () => {
         alt="Empresa parceira"
       />
       <Image
-        className="object-cover bg-gray-3 p-1 rounded-radius-1 max-w-[120px] sm:max-w-[160px] dark:bg-gray-5 "
+        className="object-cover bg-gray-3 p-1 rounded-radius-1 max-w-[120px] sm:max-w-[160px] dark:bg-gray-4 "
         src={companyImage}
         alt="Empresa parceira"
       />
